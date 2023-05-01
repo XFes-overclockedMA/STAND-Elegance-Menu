@@ -33,9 +33,9 @@ and if you want to continue to follow me and be alerted, I invite you to subscri
 
 🚧🚧🚧🚧
 
-SPECIAL MENTION: @Beyond 5D ond 5D For giving me the idea to redo iconic JTAG/RGH mod menu themes, thank you!💪
+SPECIAL MENTION: @Beyond 5D For giving me the idea to redo iconic JTAG/RGH mod menu themes, thank you!💪
 
-SPECIAL MENTION: @IceDoomfist  I used its load page code (Splash Screen) when the Theme is launched.🔥
+SPECIAL MENTION: @IceDoomfist I used its load page code (Splash Screen) when the Theme is launched.🔥
 
 For Elegance Menu : 0.1 ✅
 
