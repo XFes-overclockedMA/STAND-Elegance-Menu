@@ -16,7 +16,7 @@ I also made other JTAG theme for even more nostalgia 👌
 
 💎Enforcer Meu : https://github.com/XFes-overclockedMA/STAND-Enforcer
 
-💎Elegance Menu : https://github.com/XFes-overclockedMA/STAND-InfinityMenu
+💎Infinity Menu : https://github.com/XFes-overclockedMA/STAND-InfinityMenu
 
 💎Rebel Menu : https://github.com/XFes-overclockedMA/STAND-RebelMenu/releases/tag/Update
 
