@@ -1,0 +1,370 @@
+------------------------------------------------------------------------------------------------------------------------------
+--                                                                                                                          --
+--Version:                                                                                                                  --
+--0.1                                                                                                                       --
+--Build Date:                                                                                                               --
+--30/04/23                                                                                                                  --
+-----powered By = разогнанный = OverclockedMA                                                                               --
+------------------------------------------------------------------------------------------------------------------------------
+-- Elegance Menu <3                                                                                                         --
+-- Welcome on my CODE                                                                                                       --  
+-- This OPEN SOURCE PROVIDED YOU MENTION ME IN YOUR PROJECTS                                                                --  
+--> Thanks :) <3                                                                                                            --
+------------------------------------------------------------------------------------------------------------------------------
+util.keep_running() 
+util.require_natives("natives-1676318796")
+-----------------------------------------------------------------------------------------------------------------------------------
+---------------RESOURCES Elegance
+local e3 = filesystem.resources_dir() .. '#xfes-lib-theme\\elegance\\elegance3.png'
+if not io.exists(e3) then
+    util.toast('#xfes-lib-theme\\elegance\\elegance3.png not found')
+   util.stop_script()
+end
+e3b = directx.create_texture(e3)
+
+local e4 = filesystem.resources_dir() .. '#xfes-lib-theme\\elegance\\elegance4.png'
+if not io.exists(e4) then
+    util.toast('#xfes-lib-theme\\elegance\\elegance4.png not found')
+   util.stop_script()
+end
+e4b = directx.create_texture(e4)
+
+local e5 = filesystem.resources_dir() .. '#xfes-lib-theme\\elegance\\elegance5.png'
+if not io.exists(e5) then
+    util.toast('#xfes-lib-theme\\elegance\\elegance5.png not found')
+   util.stop_script()
+end
+e5b = directx.create_texture(e5)
+-----------------------------------------------------------------------------------------------
+---------------NOTIFY LAUNCH Elegance.PLUTO
+util.toast("Hi, " .. players.get_name(players.user()) .. "! \nWelcome To EleganceMenu - Theme")
+
+-----------------------------------------------------------------------------------------------
+---------------SPLASH SCREEN REPERTORY
+HC_DIR = filesystem.resources_dir() .. "#xfes-lib-theme\\elegance\\"
+eload = {
+    Img = HC_DIR .. "loading\\",
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+--------------- LOAD SPLASH IMG
+function SHOW_IMG(img_name, max_passed_time)----------------------------------------------Credit goes to LanceScript Reloaded (THANKS, LanceScript Team :) <3 )
+    if filesystem.exists(eload.Img .. img_name) then
+        local ImgAlpha = 0
+        local IncreasedImgAlpha = 0.01
+        util.create_tick_handler(function()
+            ImgAlpha = ImgAlpha + IncreasedImgAlpha
+            if ImgAlpha > 1 then
+                ImgAlpha = 1
+            elseif ImgAlpha < 0 then 
+                ImgAlpha = 0
+                return false
+            end
+        end)
+
+        local Img = directx.create_texture(eload.Img .. img_name)
+        local StartedTime = os.clock()
+        util.create_tick_handler(function()
+            directx.draw_texture(Img, 0.07, 0.07, 0.5, 0.5, 0.5, 0.5, 0, 1, 1, 1, ImgAlpha)
+            local PassedTime = os.clock() - StartedTime
+            if PassedTime > max_passed_time then
+                IncreasedImgAlpha = -0.01
+            end
+            if ImgAlpha == 0 then
+                return false
+            end
+        end)
+    end
+end
+
+if SCRIPT_MANUAL_START and not SCRIPT_SILENT_START then
+    SHOW_IMG("eload.png", 3.0)
+    GRAPHICS.ANIMPOSTFX_PLAY("FocusOut", 0, 0)
+local abc = filesystem.resources_dir() .. '#xfes-lib-theme\\elegance\\startup-sound.wav'
+local fr = soup.FileReader(abc)
+local wav = soup.audWav(fr)
+local dev = soup.audDevice.getDefault()
+local pb = dev:open(wav.channels)
+local mix = soup.audMixer()
+mix.stop_playback_when_done = true
+mix:setOutput(pb)
+mix:playSound(wav)   
+end
+-----------------------------------------------------------------------------------------------------------------------------------
+--------------- LOAD XBOX AC
+function SHOW_IMG(img_name, max_passed_time)----------------------------------------------Credit goes to LanceScript Reloaded (THANKS, LanceScript Team :) <3 )
+    if filesystem.exists(eload.Img .. img_name) then
+        local ImgAlpha = 0
+        local IncreasedImgAlpha = 0.01
+        util.create_tick_handler(function()
+            ImgAlpha = ImgAlpha + IncreasedImgAlpha
+            if ImgAlpha > 1 then
+                ImgAlpha = 1
+            elseif ImgAlpha < 0 then 
+                ImgAlpha = 0
+                return false
+            end
+        end)
+
+        local Img = directx.create_texture(eload.Img .. img_name)
+        local StartedTime = os.clock()
+        util.create_tick_handler(function()
+            directx.draw_texture(Img, 0.07, 0.05, 1.5, 4.8, 0.5, 0.5, 0, 1, 1, 1, ImgAlpha)
+            local PassedTime = os.clock() - StartedTime
+            if PassedTime > max_passed_time then
+                IncreasedImgAlpha = -0.01
+            end
+            if ImgAlpha == 0 then
+                return false
+            end
+        end)
+    end
+end
+
+if SCRIPT_MANUAL_START and not SCRIPT_SILENT_START then
+    SHOW_IMG("la.png", 3.0)
+  local abc = filesystem.resources_dir() .. '#xfes-lib-theme\\elegance\\x3602.wav'
+local fr = soup.FileReader(abc)
+local wav = soup.audWav(fr)
+local dev = soup.audDevice.getDefault()
+local pb = dev:open(wav.channels)
+local mix = soup.audMixer()
+mix.stop_playback_when_done = true
+mix:setOutput(pb)
+mix:playSound(wav)  
+end
+-----------------------------------------------------------------------------------------------------------------------------------
+---------------Profile Stand.LUA
+----------------------------------------------COLOURS
+menu.trigger_commands("primary #EE1407")
+menu.trigger_commands("focustext 000000FF")
+menu.trigger_commands("focusrighttext 000000FF")
+menu.trigger_commands("focustexture 000000FF")
+menu.trigger_commands("backgroundopacity 0")
+menu.trigger_commands("background 00000000")
+----------------------------------------------POSITION
+menu.trigger_commands("menux 1355")
+menu.trigger_commands("menuy 171")
+----------------------------------------------ADRESSE BAR
+menu.trigger_commands("addressbar off")
+menu.trigger_commands("cursorpos on")
+----------------------------------------------TABS
+menu.trigger_commands("tabs off")
+
+----------------------------------------------SCROLLBAR 
+----------------------------------------------SCROLLBAR DISABLED MANUALY BEACEAUSE COMMAND NOT FOUND... 
+menu.trigger_commands("scrollbarwidth 10")
+----------------------------------------------APPEARANCE MAIN 
+menu.trigger_commands("menuheight 20")
+menu.trigger_commands("listwidth 370")
+menu.trigger_commands("listheight 41")
+menu.trigger_commands("spacersize 5")
+menu.trigger_commands("smoothscroll 110")
+menu.trigger_commands("blur 0")
+----------------------------------------------NOTIFICATIONS 
+menu.trigger_commands("notifyborder #EE1407")
+menu.trigger_commands("notifyflash #EE1407")
+menu.trigger_commands("notifybg 030403DC")
+----------------------------------------------COMMANDS
+menu.trigger_commands("commandtextscale 15")
+menu.trigger_commands("commandtextxoffset -2")
+menu.trigger_commands("commandtextyoffset 8")
+-----------------------------------------------------------------------------------------------------------------------------------
+--------------- STRING COLOR Background
+local rect_colour = {
+	["r"] = 0.0,
+	["g"] = 0.0,
+	["b"] = 0.0,
+	["a"] = 0.5
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+---------------HEADER DIVIDER
+menu.divider(menu.my_root(), ("Elegance - Settings"))
+menu.divider(menu.my_root(), ("------Preset - Version------"))
+-----------------------------------------------------------------------------------------------------------------------------------
+--------------- Version Preset
+TitleC = menu.slider(menu.my_root(), ("Preset Menu"), {"elgancep"}, "Customize Font Title", 0, 2, 0, 1, function(); 
+
+local abc = filesystem.resources_dir() .. '#xfes-lib-theme\\elegance\\sls.wav'
+local fr = soup.FileReader(abc)
+local wav = soup.audWav(fr)
+local dev = soup.audDevice.getDefault()
+local pb = dev:open(wav.channels)
+local mix = soup.audMixer()
+mix.stop_playback_when_done = true
+mix:setOutput(pb)
+mix:playSound(wav)  
+
+if rb == 0 then
+----------------------------------------------COLOURS
+menu.trigger_commands("primary #EE1407")
+menu.trigger_commands("focustext 000000FF")
+menu.trigger_commands("focusrighttext 000000FF")
+menu.trigger_commands("focustexture 000000FF")
+menu.trigger_commands("backgroundopacity 0")
+menu.trigger_commands("background 00000000")
+----------------------------------------------POSITION
+menu.trigger_commands("menux 1355")
+menu.trigger_commands("menuy 171")
+----------------------------------------------ADRESSE BAR
+menu.trigger_commands("addressbar off")
+menu.trigger_commands("cursorpos on")
+----------------------------------------------TABS
+menu.trigger_commands("tabs off")
+----------------------------------------------SCROLLBAR 
+----------------------------------------------SCROLLBAR DISABLED MANUALY BEACEAUSE COMMAND NOT FOUND... 
+menu.trigger_commands("scrollbarwidth 10")
+----------------------------------------------APPEARANCE MAIN 
+menu.trigger_commands("menuheight 20")
+menu.trigger_commands("listwidth 370")
+menu.trigger_commands("listheight 41")
+menu.trigger_commands("spacersize 5")
+menu.trigger_commands("smoothscroll 110")
+menu.trigger_commands("blur 0")
+----------------------------------------------NOTIFICATIONS 
+menu.trigger_commands("notifyborder #EE1407")
+menu.trigger_commands("notifyflash #EE1407")
+menu.trigger_commands("notifybg 030403DC")
+----------------------------------------------COMMANDS
+menu.trigger_commands("commandtextscale 15")
+menu.trigger_commands("commandtextxoffset -2")
+menu.trigger_commands("commandtextyoffset 8")
+util.toast("[EleganceV3] - Loaded ")
+end
+------------------------------------------------------------------------------------------------------------------------------------
+if rb == 1 then
+----------------------------------------------COLOURS
+menu.trigger_commands("primary #1FAB06")
+menu.trigger_commands("focustext 000000FF")
+menu.trigger_commands("focusrighttext 000000FF")
+menu.trigger_commands("focustexture 000000FF")
+menu.trigger_commands("backgroundopacity 0")
+menu.trigger_commands("background 00000000")
+----------------------------------------------POSITION
+menu.trigger_commands("menux 1202")
+menu.trigger_commands("menuy 171")
+----------------------------------------------ADRESSE BAR
+menu.trigger_commands("addressbar off")
+menu.trigger_commands("cursorpos on")
+----------------------------------------------TABS
+menu.trigger_commands("tabs off")
+----------------------------------------------SCROLLBAR 
+----------------------------------------------SCROLLBAR DISABLED MANUALY BEACEAUSE COMMAND NOT FOUND... 
+menu.trigger_commands("scrollbarwidth 10")
+----------------------------------------------APPEARANCE MAIN 
+menu.trigger_commands("menuheight 20")
+menu.trigger_commands("listwidth 450")
+menu.trigger_commands("listheight 41")
+menu.trigger_commands("spacersize 5")
+menu.trigger_commands("smoothscroll 110")
+menu.trigger_commands("blur 0")
+----------------------------------------------NOTIFICATIONS 
+menu.trigger_commands("notifyborder #1FAB06")
+menu.trigger_commands("notifyflash #1FAB06")
+menu.trigger_commands("notifybg 030403DC")
+util.toast("[EleganceV4] - Loaded ")
+----------------------------------------------COMMANDS
+menu.trigger_commands("commandtextscale 15")
+menu.trigger_commands("commandtextxoffset -2")
+menu.trigger_commands("commandtextyoffset 8")
+end
+------------------------------------------------------------------------------------------------------------------------------------
+if rb == 2 then
+----------------------------------------------COLOURS
+menu.trigger_commands("primary #1FAB06")
+menu.trigger_commands("focustext 000000FF")
+menu.trigger_commands("focusrighttext 000000FF")
+menu.trigger_commands("focustexture 000000FF")
+menu.trigger_commands("backgroundopacity 0")
+menu.trigger_commands("background 00000000")
+----------------------------------------------POSITION
+menu.trigger_commands("menux 1202")
+menu.trigger_commands("menuy 171")
+----------------------------------------------ADRESSE BAR
+menu.trigger_commands("addressbar off")
+menu.trigger_commands("cursorpos on")
+----------------------------------------------TABS
+menu.trigger_commands("tabs off")
+----------------------------------------------SCROLLBAR 
+----------------------------------------------SCROLLBAR DISABLED MANUALY BEACEAUSE COMMAND NOT FOUND... 
+menu.trigger_commands("scrollbarwidth 10")
+----------------------------------------------APPEARANCE MAIN 
+menu.trigger_commands("menuheight 20")
+menu.trigger_commands("listwidth 450")
+menu.trigger_commands("listheight 41")
+menu.trigger_commands("spacersize 5")
+menu.trigger_commands("smoothscroll 110")
+menu.trigger_commands("blur 0")
+----------------------------------------------NOTIFICATIONS 
+menu.trigger_commands("notifyborder #1FAB06")
+menu.trigger_commands("notifyflash #1FAB06")
+menu.trigger_commands("notifybg 030403DC")
+util.toast("[EleganceV5] - Loaded ")
+----------------------------------------------COMMANDS
+menu.trigger_commands("commandtextscale 15")
+menu.trigger_commands("commandtextxoffset -2")
+menu.trigger_commands("commandtextyoffset 8")
+end
+end)
+-----------------------------------------------------------------------------------------------------------------------------------
+--------------- DIVIDER Click UI
+menu.divider(menu.my_root(), ("---------------Stand Setting---------------"))
+-----------------------------------------------------------------------------------------------------------------------------------
+--------------- SEARCH MOUSE SETTINGS
+menu.action(menu.my_root(), "Mouse Support ", {}, "Shortcut to the settings for the Mouse Support.", function(on_click)
+    menu.trigger_commands("search Mouse Support")
+ end)
+ -----------------------------------------------------------------------------------------------------------------------------------
+--------------- SEARCH CURSOR SETTING
+ menu.action(menu.my_root(), "Cursor Bar", {}, "Shortcut to the settings for the overlay.", function(on_click)
+ util.toast("[Elegance] - Stand>Settings>Appearance and colors>Primary.")
+menu.focus(menu.ref_by_path("Stand>Settings>Appearance"), function() end)
+end)
+-----------------------------------------------------------------------------------------------------------------------------------
+--------------- DIVISER Background
+menu.divider(menu.my_root(), ("By XFes-OverclockedMA v0.1"))
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+--------------- DRAW TEXTURE
+while true do
+	if menu.is_open() then
+		x, y, w, h = menu.get_main_view_position_and_size()
+
+rb = menu.get_value(TitleC)
+
+if rb  == 0 then 
+directx.draw_rect(
+x,-- x
+y - (171 / 1080),-- y
+w,-- width
+1080 / 1080,-- height
+rect_colour-- colour
+)    
+directx.draw_texture(e3b, 1.0, (81 / 1080) / 2, 0, 0, x, y - 0.098, 0, 1, 1, 1, 1)
+end
+
+if rb  == 1 then 
+directx.draw_rect(
+x,-- x
+y - (171 / 1080),-- y
+w,-- width
+1080 / 1080,-- height
+rect_colour-- colour
+)    
+directx.draw_texture(e4b, 1.0, (81 / 1080) / 2, 0, 0, x, y - 0.098, 0, 1, 1, 1, 1)
+end
+
+if rb  == 2 then 
+directx.draw_rect(
+x,-- x
+y - (171 / 1080),-- y
+w,-- width
+1080 / 1080,-- height
+rect_colour-- colour
+)    
+directx.draw_texture(e5b, 1.0, (81 / 1080) / 2, 0, 0, x, y - 0.098, 0, 1, 1, 1, 1)
+end 
+
+end
+util.yield()
+end
